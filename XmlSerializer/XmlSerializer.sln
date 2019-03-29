@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSerializer", "XmlSerializer\XmlSerializer.csproj", "{F5794B2A-8E94-4E1C-AFFD-7B12CE42147A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializerApi", "SerializerApi\SerializerApi.csproj", "{A38CA285-6BE7-4BCB-A3DB-F9A1EA371156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSerializer.Tests", "XmlSerializer.Tests\XmlSerializer.Tests.csproj", "{B704B677-35C9-4E4E-9553-1BD20CEDB82F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializerApi.Tests", "SerializerApi.Tests\SerializerApi.Tests.csproj", "{EDDD43C4-BEB9-4C3C-B251-9DF899EF74D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F5794B2A-8E94-4E1C-AFFD-7B12CE42147A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5794B2A-8E94-4E1C-AFFD-7B12CE42147A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5794B2A-8E94-4E1C-AFFD-7B12CE42147A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5794B2A-8E94-4E1C-AFFD-7B12CE42147A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B704B677-35C9-4E4E-9553-1BD20CEDB82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B704B677-35C9-4E4E-9553-1BD20CEDB82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B704B677-35C9-4E4E-9553-1BD20CEDB82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B704B677-35C9-4E4E-9553-1BD20CEDB82F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A38CA285-6BE7-4BCB-A3DB-F9A1EA371156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38CA285-6BE7-4BCB-A3DB-F9A1EA371156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A38CA285-6BE7-4BCB-A3DB-F9A1EA371156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38CA285-6BE7-4BCB-A3DB-F9A1EA371156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDD43C4-BEB9-4C3C-B251-9DF899EF74D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDD43C4-BEB9-4C3C-B251-9DF899EF74D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDD43C4-BEB9-4C3C-B251-9DF899EF74D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDD43C4-BEB9-4C3C-B251-9DF899EF74D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
