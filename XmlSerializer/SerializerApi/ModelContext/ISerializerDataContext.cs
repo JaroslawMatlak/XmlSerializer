@@ -3,10 +3,10 @@ using System.Data.Entity;
 
 namespace SerializerApi.ModelContext
 {
-    interface IModelContext
+    public interface ISerializerDataContext
     {
+        DbSet<RequestModel> RequestModels { get; set; }
         int SaveChanges();
         void Dispose();
-        DbSet<RequestModel> RequestModels { get; set; }
     }
 }

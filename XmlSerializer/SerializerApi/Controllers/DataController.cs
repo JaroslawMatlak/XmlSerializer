@@ -1,9 +1,21 @@
-﻿using System.Web.Http;
+﻿using SerializerApi.JsonConverter;
+using SerializerApi.ModelContext;
+using System.Web.Http;
 
 namespace SerializerApi.Controllers
 {
     public class DataController : ApiController
     {
+        private readonly IJsonConverter _jsonConverter;
+        private readonly ISerializerDataContext _dbContext;
+        public DataController(IJsonConverter jsonConverter, ISerializerDataContext dbContext) : base()
+        {
+            _jsonConverter = jsonConverter;
+            _dbContext = dbContext;
+        }
+
+
+        //{"ix": 10,"name": "test", "visits": 5 ,"date": "2018-01-01"}
         /// <summary>
         /// This endpoint receives a collection of serialized JSON models and stores them in a database created using automated database migrations.
         /// </summary>
@@ -15,6 +27,14 @@ namespace SerializerApi.Controllers
         /// </param>
         public void Post([FromBody]string value)
         {
+            var requestModel = _jsonConverter.ConvertJsonStringToRequestModel(value);
+            _dbContext.RequestModels.Add(requestModel);
+            _dbContext.SaveChanges();
+        }
+
+        public string Get()
+        {
+            return "aaaaa";
         }
     }
 }
