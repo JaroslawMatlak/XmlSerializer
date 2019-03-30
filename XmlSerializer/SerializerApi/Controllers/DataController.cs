@@ -14,8 +14,6 @@ namespace SerializerApi.Controllers
             _dbContext = dbContext;
         }
 
-
-        //{"ix": 10,"name": "test", "visits": 5 ,"date": "2018-01-01"}
         /// <summary>
         /// This endpoint receives a collection of serialized JSON models and stores them in a database created using automated database migrations.
         /// </summary>

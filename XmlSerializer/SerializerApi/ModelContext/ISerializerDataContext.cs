@@ -7,6 +7,5 @@ namespace SerializerApi.ModelContext
     {
         DbSet<RequestModel> RequestModels { get; set; }
         int SaveChanges();
-        void Dispose();
     }
 }
