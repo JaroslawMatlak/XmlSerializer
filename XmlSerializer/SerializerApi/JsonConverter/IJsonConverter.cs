@@ -9,6 +9,6 @@ namespace SerializerApi.JsonConverter
 {
     public interface IJsonConverter
     {
-        RequestModel ConvertJsonStringToRequestModel(string jsonString);
+        IEnumerable<RequestModel> ConvertJsonStringToRequestModels(string jsonString);
     }
 }

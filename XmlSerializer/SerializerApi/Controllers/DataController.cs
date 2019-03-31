@@ -25,8 +25,8 @@ namespace SerializerApi.Controllers
         /// </param>
         public void Post([FromBody]string value)
         {
-            var requestModel = _jsonConverter.ConvertJsonStringToRequestModel(value);
-            _dbContext.RequestModels.Add(requestModel);
+            var requestModels = _jsonConverter.ConvertJsonStringToRequestModels(value);
+            _dbContext.RequestModels.AddRange(requestModels);
             _dbContext.SaveChanges();
         }
     }

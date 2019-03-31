@@ -32,7 +32,7 @@ namespace SerializerApi.Tests.Controllers
 
 
         [Test]
-        [TestCase("{\"ix\": 10,\"name\": \"test\", \"visits\": 5 ,\"date\": \"2018 - 01 - 01\"}")]
+        [TestCase("[{\"ix\": 10,\"name\": \"test\", \"visits\": 5 ,\"date\": \"2018 - 01 - 01\"},{}]")]
         public void PostTest_Valid(string jsonString)
         {
             try

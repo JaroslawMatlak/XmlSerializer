@@ -22,12 +22,17 @@ namespace SerializerApi.Tests.JsonConverter
         [Test]
         public void ConvertJsonStringToRequestModel_Proper()
         {
-            var jsonString = "{\"ix\": 10, \"name\": \"test\", \"visits\": 5 ,\"date\": \"2018-01-01\"}";
-            var expectedValue = new RequestModel() { Index = 10, Name = "test", Visits = 5, Date = DateTime.Parse("2018-01-01") };
+            var jsonString = "[{\"ix\": 10, \"name\": \"test\", \"visits\": 5 ,\"date\": \"2018-01-01\"},"
+                +"{\"ix\": 11, \"name\": \"test1\", \"visits\": 6 ,\"date\": \"2018-01-02\"}]";
+            var expectedValue = new List<RequestModel>()
+            {
+                new RequestModel() { Index = 10, Name = "test", Visits = 5, Date = DateTime.Parse("2018-01-01") },
+                new RequestModel() { Index = 11, Name = "test1", Visits = 6, Date = DateTime.Parse("2018-01-02") }
+            };
 
-            var actualValue=_jsonConverter.ConvertJsonStringToRequestModel(jsonString);
+            var actualValue=_jsonConverter.ConvertJsonStringToRequestModels(jsonString);
 
-            Assert.IsTrue(expectedValue.CompareTo( actualValue)==0);
+            Assert.AreEqual(expectedValue, actualValue);
         }
 
         [Test]
@@ -37,7 +42,7 @@ namespace SerializerApi.Tests.JsonConverter
         {
             try
             {
-                var actualValue = _jsonConverter.ConvertJsonStringToRequestModel(jsonString);
+                var actualValue = _jsonConverter.ConvertJsonStringToRequestModels(jsonString);
             }
             catch
             {

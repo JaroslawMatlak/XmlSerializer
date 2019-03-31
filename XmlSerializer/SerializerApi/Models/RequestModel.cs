@@ -18,27 +18,30 @@ namespace SerializerApi.Models
         [JsonProperty("date")]
         public DateTime Date { get; set; }
 
-        public int CompareTo(RequestModel other)
+        public override bool Equals(object other)
         {
             if (other == null)
-                return 1;
+                return false;
+            if (other.GetType() != GetType())
+                return false;
 
+            var otherAsRequestModel = (RequestModel)other;
             var comparisonSum = 0;
-            comparisonSum += Index.CompareTo(other.Index);
+            comparisonSum += Index.CompareTo(otherAsRequestModel.Index);
 
             if (Name != null)
-                comparisonSum += Name.CompareTo(other.Name);
+                comparisonSum += Name.CompareTo(otherAsRequestModel.Name);
             else
-                comparisonSum += (other.Name == null) ? 0 : 1;
+                comparisonSum += (otherAsRequestModel.Name == null) ? 0 : 1;
 
             if(Visits!= null)
-                comparisonSum += ((int)Visits).CompareTo(other.Visits);
+                comparisonSum += ((int)Visits).CompareTo(otherAsRequestModel.Visits);
             else
-                comparisonSum += (other.Visits == null) ? 0 : 1;
+                comparisonSum += (otherAsRequestModel.Visits == null) ? 0 : 1;
 
-            comparisonSum += Date.CompareTo(other.Date);
+            comparisonSum += Date.CompareTo(otherAsRequestModel.Date);
 
-            return comparisonSum == 0 ? 0 : 1;
+            return comparisonSum == 0;
         }
     }
 }

@@ -9,11 +9,11 @@ namespace SerializerApi.JsonConverter
 {
     public class JsonConverter:IJsonConverter
     {
-        public RequestModel ConvertJsonStringToRequestModel(string jsonString)
+        public IEnumerable<RequestModel> ConvertJsonStringToRequestModels(string jsonString)
         {
             try
             {
-                return JsonConvert.DeserializeObject<RequestModel>(jsonString);
+                return JsonConvert.DeserializeObject<IEnumerable<RequestModel>>(jsonString);
             }
             catch(Exception ex)
             {
