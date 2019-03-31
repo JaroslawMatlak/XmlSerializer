@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
-using SerializerApi.JsonConverter;
+using SerializerApi.Json;
 using SerializerApi.Models;
 using System;
 
@@ -16,7 +13,7 @@ namespace SerializerApi.Tests.JsonConverter
 
         public JsonConverterTest()
         {
-            _jsonConverter = new SerializerApi.JsonConverter.JsonConverter();
+            _jsonConverter = new Json.JsonConverter();
         }
 
         [Test]

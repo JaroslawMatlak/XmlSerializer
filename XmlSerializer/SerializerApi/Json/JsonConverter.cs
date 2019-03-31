@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using Newtonsoft.Json;
 
-namespace SerializerApi.JsonConverter
+namespace SerializerApi.Json
 {
     public class JsonConverter:IJsonConverter
     {

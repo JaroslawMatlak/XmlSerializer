@@ -1,7 +1,7 @@
 ﻿using SerializerApi.Models;
 using System.Xml;
 
-namespace SerializerApi.XmlConverter
+namespace SerializerApi.XmlConverting
 {
     public class XmlConverter: IXmlConverter
     {

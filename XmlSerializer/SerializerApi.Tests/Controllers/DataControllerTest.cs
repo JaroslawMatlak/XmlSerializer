@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Moq;
 using SerializerApi.ModelContext;
-using SerializerApi.JsonConverter;
+using SerializerApi.Json;
 using SerializerApi.Models;
+using System.Net.Http;
 
 namespace SerializerApi.Tests.Controllers
 {
@@ -20,7 +21,7 @@ namespace SerializerApi.Tests.Controllers
 
         public DataControllerTest()
         {
-            var jsonConverter = new SerializerApi.JsonConverter.JsonConverter();
+            var jsonConverter = new Json.JsonConverter();
             var mockDataContext = new Mock<ISerializerDataContext>();
 
             var rm = It.IsAny<RequestModel>();
@@ -37,7 +38,8 @@ namespace SerializerApi.Tests.Controllers
         {
             try
             {
-                _dataController.Post(jsonString);
+                var request = CreateRequest(jsonString);
+                _dataController.Post(request);
             }
             catch
             {
@@ -52,13 +54,24 @@ namespace SerializerApi.Tests.Controllers
         {
             try
             {
-                _dataController.Post(jsonString);
+                var request = CreateRequest(jsonString);
+                _dataController.Post(request);
             }
             catch
             {
                 return;
             }
             Assert.Fail();
+        }
+
+        private HttpRequestMessage CreateRequest(string jsonString)
+        {
+            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            var request = new HttpRequestMessage
+            {
+                Content = content
+            };
+            return request;
         }
     }
 }

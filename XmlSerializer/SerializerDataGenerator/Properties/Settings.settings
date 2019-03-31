@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SerializerDataGenerator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SerializerApiPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost/XmlSerializerApi/</Value>
+    </Setting>
+    <Setting Name="PostDataApiPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">api/Data</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

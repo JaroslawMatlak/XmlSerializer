@@ -1,5 +1,6 @@
-﻿using SerializerApi.JsonConverter;
+﻿using SerializerApi.Json;
 using SerializerApi.ModelContext;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace SerializerApi.Controllers
@@ -17,15 +18,17 @@ namespace SerializerApi.Controllers
         /// <summary>
         /// This endpoint receives a collection of serialized JSON models and stores them in a database created using automated database migrations.
         /// </summary>
-        /// <param name="value">The request objects in JSON should have the following structure:
+        /// <param name="message">The request objects in JSON should have the following structure:
         /// {"ix": INT,
         ///  "name": STRING,
         ///  "visits": INT?,
         ///  "date": DATETIME}
         /// </param>
-        public void Post([FromBody]string value)
+        //public void Post([FromBody]string value)
+        public void Post(HttpRequestMessage message)
         {
-            var requestModels = _jsonConverter.ConvertJsonStringToRequestModels(value);
+            var json = message.Content.ReadAsStringAsync().Result;
+            var requestModels = _jsonConverter.ConvertJsonStringToRequestModels(json);
             _dbContext.RequestModels.AddRange(requestModels);
             _dbContext.SaveChanges();
         }

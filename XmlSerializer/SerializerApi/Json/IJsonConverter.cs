@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SerializerApi.JsonConverter
+namespace SerializerApi.Json
 {
     public interface IJsonConverter
     {

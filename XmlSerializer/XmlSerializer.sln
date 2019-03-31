@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializerApi", "Serializer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializerApi.Tests", "SerializerApi.Tests\SerializerApi.Tests.csproj", "{EDDD43C4-BEB9-4C3C-B251-9DF899EF74D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializerDataGenerator", "SerializerDataGenerator\SerializerDataGenerator.csproj", "{DEEFBF46-1E93-45F1-9CC6-1C87E6FECD95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EDDD43C4-BEB9-4C3C-B251-9DF899EF74D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDDD43C4-BEB9-4C3C-B251-9DF899EF74D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDDD43C4-BEB9-4C3C-B251-9DF899EF74D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEEFBF46-1E93-45F1-9CC6-1C87E6FECD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEEFBF46-1E93-45F1-9CC6-1C87E6FECD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEEFBF46-1E93-45F1-9CC6-1C87E6FECD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEEFBF46-1E93-45F1-9CC6-1C87E6FECD95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

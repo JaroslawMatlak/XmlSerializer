@@ -9,11 +9,11 @@ namespace SerializerApi.Tests.XmlConverter
     [TestFixture]
     public class XmlConverterTest
     {
-        private SerializerApi.XmlConverter.XmlConverter _xmlConverter;
+        private XmlConverting.XmlConverter _xmlConverter;
 
         public XmlConverterTest()
         {
-            _xmlConverter = new SerializerApi.XmlConverter.XmlConverter();
+            _xmlConverter = new XmlConverting.XmlConverter();
         }
 
         [Test]
