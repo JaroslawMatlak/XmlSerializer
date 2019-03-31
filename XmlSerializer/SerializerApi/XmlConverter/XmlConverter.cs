@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace SerializerApi.XmlConverter
 {
-    public class XmlConverter
+    public class XmlConverter: IXmlConverter
     {
         public XmlDocument RequestModelToXml(RequestModel requestModel)
         {

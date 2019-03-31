@@ -16,20 +16,18 @@ namespace SerializerApi.Tests.Controllers
     [TestFixture]
     public class DataControllerTest
     {
-        private readonly IJsonConverter _jsonConverter;
-        private Mock<ISerializerDataContext> _mockDataContext;
         private DataController _dataController;
 
         public DataControllerTest()
         {
-            _jsonConverter = new SerializerApi.JsonConverter.JsonConverter();
-            _mockDataContext = new Mock<ISerializerDataContext>();
+            var jsonConverter = new SerializerApi.JsonConverter.JsonConverter();
+            var mockDataContext = new Mock<ISerializerDataContext>();
 
             var rm = It.IsAny<RequestModel>();
-            _mockDataContext.Setup(m => m.RequestModels.Add(rm)).Returns(rm);
-            _mockDataContext.Setup(m => m.SaveChanges()).Returns(0);
+            mockDataContext.Setup(m => m.RequestModels.Add(rm)).Returns(rm);
+            mockDataContext.Setup(m => m.SaveChanges()).Returns(0);
 
-            _dataController = new DataController(_jsonConverter, _mockDataContext.Object);
+            _dataController = new DataController(jsonConverter, mockDataContext.Object);
         }
 
 

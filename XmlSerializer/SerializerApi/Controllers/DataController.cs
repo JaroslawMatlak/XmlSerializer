@@ -29,10 +29,5 @@ namespace SerializerApi.Controllers
             _dbContext.RequestModels.Add(requestModel);
             _dbContext.SaveChanges();
         }
-
-        public string Get()
-        {
-            return "aaaaa";
-        }
     }
 }
