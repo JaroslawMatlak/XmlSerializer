@@ -14,9 +14,9 @@ namespace SerializerApi.Tests.JsonConverter
     {
         private readonly IJsonConverter _jsonConverter;
 
-        public JsonConverterTest()//(IJsonConverter jsonConverter)
+        public JsonConverterTest()
         {
-            _jsonConverter = new SerializerApi.JsonConverter.JsonConverter();//jsonConverter;
+            _jsonConverter = new SerializerApi.JsonConverter.JsonConverter();
         }
 
         [Test]
